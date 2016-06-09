@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnMode;
 
     String firstNumber, secondNumber, result;
+    boolean point;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         btnMode = (Button) findViewById(R.id.btnMode);
 
         firstNumber = "";
+        point = false;
     }
 
     public void digitClick(View view) {
@@ -71,6 +73,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void clearClick(View view) {
         display.setText("");
+    }
+
+    public void pointClick(View view) {
+        if(!point) {
+            Button b = (Button) view;
+            String buttonText = b.getText().toString();
+            firstNumber += buttonText;
+            display.setText(firstNumber);
+            point = true;
+        }
     }
 
 }
