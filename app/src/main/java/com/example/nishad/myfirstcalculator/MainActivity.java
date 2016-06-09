@@ -30,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
     private Button btnRoot;
     private Button btnMode;
 
-    String firstNumber, secondNumber, result;
-    boolean pointFound;
+    String currentText, operator, result;
+    int digitCount;
+    double currentNumber;
+    boolean pointFound, equalPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,30 +62,91 @@ public class MainActivity extends AppCompatActivity {
         btnRoot = (Button) findViewById(R.id.btnRoot);
         btnMode = (Button) findViewById(R.id.btnMode);
 
-        firstNumber = "";
+        currentText = "";
+        digitCount = 0;
         pointFound = false;
+        equalPressed = false;
     }
 
     public void digitClick(View view) {
-        Button b = (Button) view;
-        String buttonText = b.getText().toString();
-        firstNumber += buttonText;
-        display.setText(firstNumber);
+        if(digitCount < 12) {
+            Button b = (Button) view;
+            String buttonText = b.getText().toString();
+            if(digitCount == 0) {
+                display.setText("");
+            }
+            if(equalPressed) {
+                currentText = "";
+                display.setText("");
+                equalPressed = false;
+            }
+            String oldText = display.getText().toString();
+            currentText = oldText + buttonText;
+            display.setText(currentText);
+            digitCount++;
+        }
     }
 
     public void clearClick(View view) {
         display.setText("");
         pointFound = false;
-        firstNumber = "";
+        equalPressed = false;
+        currentText = "";
+        currentNumber = 0;
+        digitCount = 0;
     }
 
     public void pointClick(View view) {
         if(!pointFound) {
+            if(digitCount < 15) {
+                currentText += ".";
+                display.setText(currentText);
+                pointFound = true;
+                digitCount++;
+            }
+        }
+    }
+
+    public void operatorClick(View view) {
+        try {
             Button b = (Button) view;
-            String buttonText = b.getText().toString();
-            firstNumber += buttonText;
-            display.setText(firstNumber);
-            pointFound = true;
+            operator = b.getText().toString();
+            display.setText(operator);
+            currentNumber += Double.parseDouble(currentText);
+            currentText = "";
+            digitCount = 0;
+        } catch (Exception e) {
+
+        }
+    }
+
+    public void equalClick(View view) {
+        try {
+            Double newNumber = Double.parseDouble(currentText);
+            switch (operator) {
+                case "+":
+                    currentNumber += newNumber;
+                    break;
+                case "-":
+                    currentNumber -= newNumber;
+                    break;
+                case "X":
+                    currentNumber *= newNumber;
+                    break;
+                case "÷":
+                    currentNumber /= newNumber;
+                    break;
+                case "%":
+                    currentNumber %= newNumber;
+                    break;
+                default:
+                    break;
+            }
+            display.setText("= " + currentNumber);
+            currentText = "" + currentNumber;
+            equalPressed = true;
+        } catch (Exception e) {
+
         }
     }
 
