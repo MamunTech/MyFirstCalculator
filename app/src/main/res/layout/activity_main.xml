@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="#ccc"
-        android:gravity="right"
+        android:gravity="end"
         android:textSize="40sp"
         android:layout_weight="2" />
 
@@ -30,6 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:onClick="clearClick"
             android:text="@string/clear_text" />
 
@@ -38,6 +39,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:text="@string/plus_minus_text" />
 
         <Button
@@ -45,6 +47,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:text="@string/root_text" />
 
         <Button
@@ -52,6 +55,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:text="@string/mode_text" />
 
     </LinearLayout>
@@ -67,6 +71,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:onClick="digitClick"
             android:text="@string/seven_text" />
 
@@ -75,6 +80,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:onClick="digitClick"
             android:text="@string/eight_text" />
 
@@ -83,6 +89,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:onClick="digitClick"
             android:text="@string/nine_text" />
 
@@ -91,6 +98,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="35sp"
             android:text="@string/divide_text" />
 
     </LinearLayout>
@@ -106,6 +114,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:onClick="digitClick"
             android:text="@string/four_text" />
 
@@ -114,6 +123,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:onClick="digitClick"
             android:text="@string/five_text" />
 
@@ -122,6 +132,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:onClick="digitClick"
             android:text="@string/six_text" />
 
@@ -130,6 +141,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:text="@string/multiply_text" />
 
     </LinearLayout>
@@ -145,6 +157,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:onClick="digitClick"
             android:text="@string/one_text" />
 
@@ -153,6 +166,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:onClick="digitClick"
             android:text="@string/two_text" />
 
@@ -161,6 +175,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:onClick="digitClick"
             android:text="@string/three_text" />
 
@@ -169,6 +184,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="45sp"
             android:text="@string/minus_text" />
 
     </LinearLayout>
@@ -184,6 +200,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:onClick="digitClick"
             android:text="@string/zero_text" />
 
@@ -192,6 +209,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:onClick="pointClick"
             android:text="@string/point_text" />
 
@@ -200,6 +218,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:text="@string/equal_text" />
 
         <Button
@@ -207,6 +226,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="30sp"
             android:text="@string/plus_text" />
 
     </LinearLayout>
