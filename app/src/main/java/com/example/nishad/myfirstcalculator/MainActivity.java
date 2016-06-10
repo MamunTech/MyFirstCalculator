@@ -112,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
             Button b = (Button) view;
             operator = b.getText().toString();
             display.setText(operator);
-            currentNumber += Double.parseDouble(currentText);
             currentText = "";
             digitCount = 0;
         } catch (Exception e) {
@@ -142,9 +141,27 @@ public class MainActivity extends AppCompatActivity {
                 default:
                     break;
             }
-            display.setText("= " + currentNumber);
+            display.setText("" + currentNumber);
             currentText = "" + currentNumber;
             equalPressed = true;
+        } catch (Exception e) {
+
+        }
+    }
+
+    public void rootClick(View view) {
+        try {
+            currentNumber = Double.parseDouble(currentText);
+            display.setText("" + Math.sqrt(currentNumber));
+        } catch (Exception e) {
+
+        }
+    }
+
+    public void arrowClick(View view) {
+        try {
+            currentText = currentText.substring(0, currentText.length() - 1);
+            display.setText(currentText);
         } catch (Exception e) {
 
         }

@@ -20,4 +20,5 @@
     <string name="clear_text">C</string>
     <string name="root_text">√</string>
     <string name="plus_minus_text">+/-</string>
+    <string name="arrow_text">→</string>
 </resources>
